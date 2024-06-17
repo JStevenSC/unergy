@@ -8,22 +8,21 @@
                 <img :src="'https://api.unergy.io' + proyecto.project_file[0].nomfile_img" alt="proyecto" class="card-img-top rounded imagen-pequena">
                 
                 <div class="  card-body ">                
-                    <ul class="list-unstyled ">
-                        <li>
-                        <strong ><i class="bi bi-bar-chart icono-margi"></i>Porcentaje de financiación:</strong> {{ proyecto.porc_avance_financiacion }}
-                        </li>
-                        <li>
-                        <strong><i class="bi bi-graph-up icono-margi"></i>Rentabilidad estimada:</strong> {{ proyecto.rentabilidad.toFixed(3)  }}
-                        </li>
-                        <li>
-                        <strong><i class="bi bi-geo-alt-fill icono-maargi"></i> Localización:</strong> {{ proyecto.id_caracterizacion.ciudad }}
-                        </li>
-                        <li>
-                        <strong><i class="bi bi-calendar-event icono-margi"></i> Fecha ini. rentabilidad:</strong> {{ proyecto.fecha_inicio_rentabilidad }}
-                        </li>
-                    </ul>
-                    
-                    <button type="button" class="btn" @click="openModal(proyecto)">Mas información </button>
+                  <ul class="list-unstyled ">
+                    <li>
+                    <strong ><i class="bi bi-bar-chart icono-margi"></i>Porcentaje de financiación:</strong> {{ proyecto.porc_avance_financiacion }}
+                    </li>
+                    <li>
+                    <strong><i class="bi bi-graph-up icono-margi"></i>Rentabilidad estimada:</strong> {{ proyecto.rentabilidad.toFixed(3)  }}
+                    </li>
+                    <li>
+                    <strong><i class="bi bi-geo-alt-fill icono-maargi"></i> Localización:</strong> {{ proyecto.id_caracterizacion.ciudad }}
+                    </li>
+                    <li>
+                    <strong><i class="bi bi-calendar-event icono-margi"></i> Fecha ini. rentabilidad:</strong> {{ proyecto.fecha_inicio_rentabilidad }}
+                    </li>
+                  </ul>                    
+                  <button type="button" class="btn" @click="openModal(proyecto)">Mas información </button>
                 </div>
             </div>
         </div>
@@ -46,34 +45,34 @@
             
             <div class="  card-body border border-2 ">                
                     <ul class="list-unstyled m-3">
-                        <strong><p>General</p></strong>
-                        <li>
-                        <strong ><i class="bi bi-bar-chart icono-margi"></i>Porcentaje de financiación:</strong> {{ proyecto.porc_avance_financiacion }}
-                        </li>
-                        <li>
-                        <strong><i class="bi bi-graph-up icono-margi"></i>Rentabilidad estimada:</strong> {{ proyecto.rentabilidad.toFixed(3)  }}
-                        </li>
-                        <li>
-                        <strong><i class="bi bi-geo-alt-fill icono-maargi"></i> Localización:</strong> {{ proyecto.id_caracterizacion.ciudad }}
-                        </li>
-                        <li>
-                        <strong><i class="bi bi-calendar-event icono-margi"></i> Fecha ini. rentabilidad:</strong> {{ proyecto.fecha_inicio_rentabilidad }}
-                        </li>
-                        <hr>
+                      <strong><p>General</p></strong>
+                      <li>
+                      <strong ><i class="bi bi-bar-chart icono-margi"></i>Porcentaje de financiación:</strong> {{ proyecto.porc_avance_financiacion }}
+                      </li>
+                      <li>
+                      <strong><i class="bi bi-graph-up icono-margi"></i>Rentabilidad estimada:</strong> {{ proyecto.rentabilidad.toFixed(3)  }}
+                      </li>
+                      <li>
+                      <strong><i class="bi bi-geo-alt-fill icono-maargi"></i> Localización:</strong> {{ proyecto.id_caracterizacion.ciudad }}
+                      </li>
+                      <li>
+                      <strong><i class="bi bi-calendar-event icono-margi"></i> Fecha ini. rentabilidad:</strong> {{ proyecto.fecha_inicio_rentabilidad }}
+                      </li>
+                      <hr>
 
-                        <strong><p>Metricas</p></strong>
-                        <li>
-                        <strong><i class="bi bi-lightning icono-maargi"></i> Energia Total:</strong> {{ proyecto.metrics.energia_total.toFixed(3) }}
-                        </li>
-                        <li>
-                        <strong><i class="bi bi-cloud-sun icono-maargi"></i> CO2 Ahorrado:</strong> {{ proyecto.metrics.co2_ahorrado.toFixed(3)}}
-                        </li>
-                        <li>
-                        <strong><i class="bi bi-tree icono-maargi"></i> Arboles Salvados:</strong> {{ proyecto.metrics.arboles_salvados.toFixed(3) }}
-                        </li>
-                    </ul>                   
+                      <strong><p>Métricas</p></strong>
+                      <li>
+                      <strong><i class="bi bi-lightning icono-maargi"></i> Energia Total:</strong> {{ proyecto.metrics.energia_total.toFixed(3) }}
+                      </li>
+                      <li>
+                      <strong><i class="bi bi-cloud-sun icono-maargi"></i> CO2 Ahorrado:</strong> {{ proyecto.metrics.co2_ahorrado.toFixed(3)}}
+                      </li>
+                      <li>
+                      <strong><i class="bi bi-tree icono-maargi"></i> Arboles Salvados:</strong> {{ proyecto.metrics.arboles_salvados.toFixed(3) }}
+                      </li>
+                    </ul>                  
                    
-                </div>    
+                </div> 
 
             <div class="m-3 ">
                 {{ proyecto.description_l[0].text }}
@@ -126,16 +125,14 @@ export default {
 
         redireccionar2(proyecto) {
         this.$router.push({ name: 'contactanos' });
-        this.redireccionar(proyecto)
-       
+        this.redireccionar(proyecto)       
       }
- 
-
     },
     props: ["proyecto"]
 };
-
 </script>
+
+
 
 <style lang="scss">
 
@@ -154,6 +151,4 @@ export default {
 .btn:hover {
   background-color: #6415c5; 
 }
-
-
 </style>

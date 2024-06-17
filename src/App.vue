@@ -3,16 +3,13 @@
     <div class="wrapper d-flex flex-column min-vh-100">
       <nav class="navbar navbar-expand rounded-bottom justify-content-center">
         <div class="container">
-
           <div class="navbar-brand col-md-1">
             <img alt="logo" src="./assets/unergy1.png">
           </div>
-
           <div class="collapse navbar-collapse col-md-4 justify-content-end">
-            <ul class="navbar-nav">
-            
+            <ul class="navbar-nav">            
               <li class="nav-item">
-                <router-link to="/nosotros" class="nav-link">Nosotros</router-link>
+                <router-link to="/" class="nav-link">Nosotros</router-link>
               </li>
               <li class="nav-item">
                 <router-link to="/proyectos" class="nav-link">Proyectos</router-link>
@@ -25,12 +22,10 @@
         </div>
       </nav>
       
-      <!-- Contenido principal -->
       <main class="flex-fill">
         <router-view />
       </main>
 
-      <!-- Footer -->
       <footer class="footer">
         <div class="container">
           <div class="row d-flex flex-row">
@@ -71,34 +66,25 @@ export default {
   color: #000000;
   background-color: #f9f5ff; 
 }
-
-
 .navbar {
-  background-color: #400D7E; /* Cambiar color de fondo del navbar */
+  background-color: #400D7E; 
 }
-
 .navbar-nav .nav-link {
-  color: #ffffff; /* Cambiar color del texto de los enlaces del router a azul */
+  color: #ffffff; 
 }
-
 .navbar-nav .nav-link.active,
 .navbar-nav .nav-link:focus,
 .navbar-nav .nav-link:hover {
-  color: #ab77ec; /* Cambiar color del texto de los enlaces del router a rojo cuando están activos, con foco o al pasar el ratón */
+  color: #ab77ec; 
 }
-
-
-
-
 .footer {
   padding: 1rem 0;
   color: #ffffff; 
   background-color: #400D7E;
   text-align: center;
-
 }
-.footer a { /* Aplica estilos a los enlaces dentro de .footer */
-  color: #ffffff; /* Color blanco para los enlaces */
+.footer a { 
+  color: #ffffff; 
 }
 .wrapper {
   display: flex;

@@ -2,7 +2,7 @@ import { createRouter,  createWebHistory } from 'vue-router'
 
 const routes = [
   {
-    path: '/nosotros',
+    path: '/',
     name: 'nosotros',
     component: () => import('../views/AboutView.vue')
   },
@@ -18,7 +18,6 @@ const routes = [
   },
 ]
 const router = createRouter({
-  //history: createWebHashHistory(),
   history: createWebHistory(process.env.BASE_URL),
   routes
 })

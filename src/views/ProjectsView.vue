@@ -1,14 +1,14 @@
 <template>
-    <div class="nosotros">
+    <div >
       <h1 class="m-3" >Nuestros Proyectos </h1>
       <div class="card-group  justify-content-center">
         <ProjectsCard v-for="(proyecto, index) of proyectos" v-bind:key="index" v-bind:proyecto="proyecto"/>
       </div>
     </div>
 </template>
-  
-  <script>
-  
+
+
+<script>
  import  axios from  'axios';
  import ProjectsCard from '../components/ProjectComponent.vue'
 
@@ -33,7 +33,6 @@
           this.loading = false;
           return;
         }
-
         try {
           const response = await axios.get("https://api.unergy.io/api/landing/project/");
           this.proyectos = response.data;
@@ -45,13 +44,11 @@
         } finally {
           this.loading = false; // Finalizar la indicación de carga
         }
-      }
-      
+      }      
     },
     created () {
       this.fetch1()
     }
-  }
-    
+  }    
   </script>
   

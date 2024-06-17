@@ -43,8 +43,8 @@
         </div>
 
         <div class="col-12 col-md-1 d-flex justify-content-center align-items-center"></div>
-
       </div>
+
     </div>
   </div>
 </template>

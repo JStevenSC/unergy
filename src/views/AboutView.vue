@@ -45,19 +45,14 @@
 
 export default {
   data() {
-    return {
-   
+    return {   
     };
   },
-  methods: {
-    
+  methods: {    
   },
 };
 </script>
 
 <style>
-.texto {
-  text-align: center; 
-}
 
 </style>
